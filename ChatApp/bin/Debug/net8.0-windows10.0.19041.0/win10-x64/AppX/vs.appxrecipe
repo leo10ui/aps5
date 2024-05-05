@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.chatapp</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>15D8175B7538117ED74DE2A703DF3EBABC5BDCA52188A2E97F977DB16DBD8948</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.chatapp_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.chatapp_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -26,268 +26,268 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-05T00:17:05.047</Modified>
+      <Modified>2024-05-05T12:13:46.855</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-05T00:17:04.876</Modified>
+      <Modified>2024-05-05T12:13:46.700</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.runtimeconfig.json">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.runtimeconfig.json">
       <PackagePath>ChatApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-05-04T18:57:08.165</Modified>
+      <Modified>2024-05-05T12:07:08.244</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.dll">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.dll">
       <PackagePath>ChatApp.dll</PackagePath>
-      <Modified>2024-05-05T00:17:04.287</Modified>
+      <Modified>2024-05-05T12:13:46.164</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ChatApp.exe</PackagePath>
-      <Modified>2024-05-05T00:17:04.292</Modified>
+      <Modified>2024-05-05T12:13:46.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2024-05-04T18:48:16.163</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:20.202</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:20.232</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:20.278</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:20.347</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:20.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2024-05-04T18:48:16.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2024-05-04T18:48:16.157</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
       <Modified>2024-05-04T18:49:20.958</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:21.958</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:22.016</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:22.071</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:22.170</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:22.489</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
       <Modified>2024-05-04T18:49:21.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
       <Modified>2024-05-04T18:49:21.227</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
       <Modified>2024-05-04T18:49:21.275</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
       <Modified>2024-05-04T18:49:21.237</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
       <Modified>2024-05-04T18:49:21.248</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
       <Modified>2024-05-04T18:49:21.135</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
       <Modified>2024-05-04T18:49:21.145</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
       <Modified>2024-05-04T18:49:21.206</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
       <Modified>2024-05-04T18:49:21.164</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
       <Modified>2024-05-04T18:49:21.176</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:20.991</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:21.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.022</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.035</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.054</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
       <Modified>2024-05-04T18:49:21.064</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
       <Modified>2024-05-04T18:49:21.073</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
       <Modified>2024-05-04T18:49:21.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
       <Modified>2024-05-04T18:49:21.082</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
       <Modified>2024-05-04T18:49:21.093</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:21.430</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:21.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.467</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.501</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.597</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:21.348</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:21.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.371</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.384</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.416</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:21.285</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:21.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.306</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.317</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:21.623</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:21.657</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.691</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.744</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.918</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
       <Modified>2024-05-04T18:49:20.933</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
       <Modified>2024-05-04T18:49:20.957</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
       <Modified>2024-05-04T18:49:21.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
       <Modified>2024-05-04T18:49:21.050</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
       <Modified>2024-05-04T18:49:21.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\10 - Projetos\APS_5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.deps.json">
+    <AppxPackagedFile Include="D:\Source\Repos\leo10ui\aps5\ChatApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatApp.deps.json">
       <PackagePath>ChatApp.deps.json</PackagePath>
-      <Modified>2024-05-04T21:42:11.807</Modified>
+      <Modified>2024-05-05T12:07:08.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Diego Freire\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

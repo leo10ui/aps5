@@ -54,15 +54,35 @@ namespace ChatApp.ViewModel
         {
             if (EntryNome != null && IsEntryNome)
             {
+                // Ação entrar
                 Nome = EntryNome;
                 Titulo = "Entrou no chat como: " + Nome;
                 IsEntryNome = false;
                 IsBtnEnviar = true;
                 IsEditor = true;
                 BtnTexto = "Sair";
+
+                var mensagem = new Mensagem
+                {
+                    Conteudo = Nome + " entrou do chat",
+                    Timestamp = DateTime.Now,
+                    Emissor = String.Empty
+                };
+
+                Mensagens.Add(mensagem);
             }
             else
-            { 
+            {
+                // Ação sair
+                var mensagem = new Mensagem
+                {
+                    Conteudo = Nome + " saiu do chat",
+                    Timestamp = DateTime.Now,
+                    Emissor = String.Empty
+                };
+
+                Mensagens.Add(mensagem);
+
                 EntryNome = string.Empty;
                 Nome = string.Empty;
                 Titulo = "APS 5 Semestre";
