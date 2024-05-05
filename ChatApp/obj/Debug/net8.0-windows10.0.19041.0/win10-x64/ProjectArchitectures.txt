@@ -1,0 +1,1 @@
+D:\10 - Projetos\APS_5\ChatApp\ChatApp.csproj;x64
