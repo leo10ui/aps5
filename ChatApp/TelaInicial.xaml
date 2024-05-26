@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatApp.TelaInicial"
+             xmlns:viewmodel="clr-namespace:ChatApp.ViewModel"
+             BackgroundColor="#21315A"
+             x:DataType="viewmodel:MainViewModel"
+             xmlns:local="clr-namespace:ChatApp">
+    
+    <VerticalStackLayout VerticalOptions="Center">
+        <Label 
+            Text="Ecochat"
+            Margin="10"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="35"/>
+        <Label 
+            Text="Conectando aqueles que querem tornar o mundo melhor"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="10"/>
+        <Image Source="terra.gif" 
+                Aspect="AspectFit"
+               WidthRequest="250"
+               HeightRequest="250"/>
+        <Button Pressed="NavegarChat"  Text="Acessar Chat" Margin="3" WidthRequest="500"/>
+    </VerticalStackLayout>
+</ContentPage>

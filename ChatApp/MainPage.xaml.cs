@@ -1,4 +1,5 @@
 ﻿using ChatApp.ViewModel;
+using ChatApp;
 
 namespace ChatApp
 {
@@ -10,6 +11,10 @@ namespace ChatApp
             BindingContext = vm;
         }
 
+        async void NavegarChat(object sender, EventArgs args)
+        {
+            await Navigation.PopToRootAsync();
+        }
 
     }
 
