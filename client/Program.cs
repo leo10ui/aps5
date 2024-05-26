@@ -1,72 +1,76 @@
 ﻿using System;
-using System.IO;
-using System.Net.Sockets;
+using System.Net.WebSockets;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
-class Client
+class WebSocketClient
 {
-    static void Main(string[] args)
+    private ClientWebSocket _clientWebSocket;
+
+    public WebSocketClient()
     {
-        StartClient();
+        _clientWebSocket = new ClientWebSocket();
     }
 
-    static void StartClient()
+    public async Task Connect(string uri)
     {
-        TcpClient clientSocket = new TcpClient();
-        clientSocket.Connect("127.0.0.1", 8888);
-        Console.WriteLine("Client Socket Program - Server Connected ...");
+        await _clientWebSocket.ConnectAsync(new Uri(uri), CancellationToken.None);
+        Console.WriteLine("Connected to WebSocket server.");
+    }
 
-        // Solicitar o nome do usuário
-        Console.Write("Enter your name: ");
-        string name = Console.ReadLine();
+    public async Task SendEvent(string eventType, string eventData)
+    {
+        var message = $"{eventType}/{eventData}";
+        await SendMessage(message);
+    }
 
-        // Enviar o nome do usuário para o servidor
-        NetworkStream networkStream = clientSocket.GetStream();
-        byte[] nameBytes = Encoding.ASCII.GetBytes(name);
-        networkStream.Write(nameBytes, 0, nameBytes.Length);
+    private async Task SendMessage(string message)
+    {
+        var buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(message));
+        await _clientWebSocket.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
+        Console.WriteLine($"Sent message: {message}");
+    }
 
-        // Iniciar uma nova thread para receber mensagens do servidor
-        var receiveThread = new System.Threading.Thread(() => ReceiveMessages(clientSocket));
-        receiveThread.Start();
-
-        // Solicitar entrada do usuário e enviar mensagens para o servidor
-        Console.WriteLine("Enter the string to be transmitted : ");
-
-        while (true)
+    public async Task Receive()
+    {
+        var buffer = new byte[1024];
+        while (_clientWebSocket.State == WebSocketState.Open)
         {
-            Console.Write($"{name}: ");
-            string message = Console.ReadLine();
-
-            // Adicionar o caractere delimitador "$" ao final da mensagem
-            message += "$";
-
-            byte[] sendBytes = Encoding.ASCII.GetBytes(message);
-            networkStream.Write(sendBytes, 0, sendBytes.Length);
-            networkStream.Flush();
+            var result = await _clientWebSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+            var receivedMessage = Encoding.UTF8.GetString(buffer, 0, result.Count);
+            Console.WriteLine($"Received message: {receivedMessage}");
         }
     }
 
-    // Método para receber mensagens do servidor
-    static void ReceiveMessages(object clientSocketObj)
+    public async Task Disconnect()
     {
-        TcpClient clientSocket = (TcpClient)clientSocketObj;
-        NetworkStream networkStream = clientSocket.GetStream();
+        await _clientWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Client disconnected.", CancellationToken.None);
+        Console.WriteLine("Disconnected from WebSocket server.");
+    }
+}
 
-        while (true)
-        {
-            try
-            {
-                // Ler os dados do servidor
-                byte[] bytesFrom = new byte[clientSocket.ReceiveBufferSize];
-                int bytesRead = networkStream.Read(bytesFrom, 0, clientSocket.ReceiveBufferSize);
-                string dataFromServer = Encoding.ASCII.GetString(bytesFrom, 0, bytesRead).TrimEnd('$');
-                Console.WriteLine(dataFromServer);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(" >> " + ex.ToString());
-                break;
-            }
-        }
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        var client = new WebSocketClient();
+        await client.Connect("ws://localhost:8080");
+
+        // Enviar evento para o servidor
+        await client.SendEvent("message", "Nicolas$Olá servidor!");
+
+        // Aguardar por mensagens recebidas
+        var receiveTask = client.Receive();
+
+        // Aguardar o usuário pressionar uma tecla para desconectar
+        Console.WriteLine("Pressione qualquer tecla para desconectar.");
+        Console.ReadKey();
+
+        // Desconectar do servidor
+        await client.Disconnect();
+
+        // Aguardar a conclusão da tarefa de recebimento (para garantir limpeza correta)
+        await receiveTask;
     }
 }

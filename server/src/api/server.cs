@@ -1,114 +1,81 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Net;
-using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
-class ApiServer
+public class WebSocketServer
 {
-    public static List<ClientInfo> clientList = new List<ClientInfo>();
-    public static List<ClientsMessages> messagesList = new List<ClientsMessages>();
+    private readonly HttpListener _listener;
+    public List<WebSocket> ConnectedSockets { get; } = new List<WebSocket>();
+    private readonly EventsController eventsController = new EventsController();
 
-
-    public static void StartServer()
+    public WebSocketServer(string ipAddress, int port)
     {
-        TcpListener serverSocket = new TcpListener(IPAddress.Any, 8888);
-        serverSocket.Start();
-        Console.WriteLine("🚀 Server listening on port 8000");
+        _listener = new HttpListener();
+        _listener.Prefixes.Add($"http://{ipAddress}:{port}/");
+    }
+
+    public async Task Start()
+    {
+        _listener.Start();
+        Console.WriteLine("Servidor Iniciado.");
 
         while (true)
         {
-            TcpClient clientSocket = serverSocket.AcceptTcpClient();
-            Console.WriteLine(" >> Client connected");
-
-            HandleClient client = new HandleClient();
-            client.StartClient(clientSocket);
-            NetworkStream networkStream = clientSocket.GetStream();
-            // foreach (ClientsMessages el in messagesList)
-            // {
-            //     Console.WriteLine(el.ClientName);
-            //     Console.WriteLine(el.TimeStamp);
-            //     Console.WriteLine(el.ClientMessage);
-            //     byte[] sendBytes = Encoding.ASCII.GetBytes($"{el.TimeStamp} - {el.ClientName}: {el.ClientMessage}");
-            //     networkStream.Write(sendBytes, 0, sendBytes.Length);
-            //     networkStream.Flush();
-            // }
+            var context = await _listener.GetContextAsync();
+            if (context.Request.IsWebSocketRequest)
+            {
+                ProcessWebSocketRequest(context);
+            }
+            else
+            {
+                context.Response.StatusCode = 400;
+                context.Response.Close();
+            }
         }
     }
 
-    // public static void BroadcastMessage(string message, string sender)
-    // {
-    //     foreach (ClientInfo clientInfo in clientList.ToArray())
-    //     {
-    //         try
-    //         {
-    //             if (clientInfo.ClientName != sender)
-    //             {
-    //                 TcpClient clientSocket = clientInfo.ClientSocket;
-
-    //                 if (clientSocket != null && clientSocket.Connected)
-    //                 {
-    //                     NetworkStream networkStream = clientSocket.GetStream();
-
-    //                     // Construir a mensagem formatada com o nome de usuário do remetente
-    //                     string formattedMessage = $"{sender}: {message}";
-
-    //                     byte[] sendBytes = Encoding.ASCII.GetBytes(formattedMessage);
-    //                     networkStream.Write(sendBytes, 0, sendBytes.Length);
-    //                     networkStream.Flush();
-    //                 }
-    //                 else
-    //                 {
-    //                     Console.WriteLine("Error broadcasting message to a client: Client socket is not connected.");
-    //                 }
-    //             }
-    //         }
-    //         catch (Exception ex)
-    //         {
-    //             Console.WriteLine("Error broadcasting message to a client: " + ex.Message);
-    //         }
-    //     }
-    // }
-}
-
-public class HandleClient
-{
-    // TcpClient clientSocket;
-    // string clientName;
-    public Message message = new Message();
-    public void StartClient(TcpClient inClientSocket)
+    private async void ProcessWebSocketRequest(HttpListenerContext context)
     {
+        var webSocketContext = await context.AcceptWebSocketAsync(null);
+        var webSocket = webSocketContext.WebSocket;
 
-        message.clientSocket = inClientSocket;
-        Thread ctThread = new Thread(message.HandleMessage);
-        ctThread.Start();
-    }
-}
-
-public class ClientInfo
-{
-    public TcpClient ClientSocket { get; set; }
-    public string ClientName { get; set; }
-
-    public ClientInfo()
-    {
-        ClientSocket = null;
-        ClientName = string.Empty;
+        try
+        {
+            ConnectedSockets.Add(webSocket);
+            await HandleWebSocketConnection(webSocket);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro: {ex.Message}");
+        }
     }
 
-}
-public class ClientsMessages
-{
-    public String ClientName { get; set; }
-    public String ClientMessage { get; set; }
-    public DateTime TimeStamp { get; set; }
-    public ClientsMessages()
+    private async Task HandleWebSocketConnection(WebSocket webSocket)
     {
-        ClientName = string.Empty;
-        ClientMessage = string.Empty;
-        TimeStamp = DateTime.Now;
+        var buffer = new byte[1024 * 4];
+
+        while (webSocket.State == WebSocketState.Open)
+        {
+            var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+
+            if (result.MessageType == WebSocketMessageType.Text)
+            {
+                var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                Console.WriteLine($"Evento Recebido: {message}");
+
+                await eventsController.HandleEvent(webSocket, message, ConnectedSockets);
+            }
+            else if (result.MessageType == WebSocketMessageType.Close)
+            {
+                await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
+                ConnectedSockets.Remove(webSocket);
+            }
+
+            Array.Clear(buffer, 0, buffer.Length);
+        }
     }
 }
