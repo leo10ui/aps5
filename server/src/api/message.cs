@@ -7,8 +7,9 @@ using System;
 
 public class MessageController
 {
-    public async Task HandleMessageEvent(WebSocket webSocket, string message, List<WebSocket> sockets)
-    {
+    public async Task SendMessageEvent(WebSocket webSocket, string message, List<WebSocket> sockets)
+    {   //exemplo
+        //"message/username$textodamensagem"
         var parts = message.Split('$');
         if (parts.Length != 2)
         {
@@ -18,12 +19,37 @@ public class MessageController
         var userName = parts[0];
         var messageText = parts[1];
 
-        await BroadcastMessageAsync(messageText, userName, sockets, webSocket);
+        messageText = $"message/{userName}${messageText}";
+        await BroadcastMessageAsync(messageText, sockets, webSocket);
     }
 
-    private async Task BroadcastMessageAsync(string textMessage, string senderName, List<WebSocket> sockets, WebSocket senderSocket)
+    public async Task SendImageEvent(List<WebSocket> sockets, string dataEvent, WebSocket senderSocket)
     {
-        var buffer = Encoding.UTF8.GetBytes($"{senderName}: {textMessage}");
+        // "documentmessage/nomedocara$base64"
+        var partsEvent = dataEvent.Split('$');
+        var userName = partsEvent[0];
+        var eventDataDoc = partsEvent[1];
+        var messageText = $"imagemessage/{userName}${eventDataDoc}";
+        await BroadcastMessageAsync(messageText, sockets, senderSocket);
+    }
+
+    public async Task SendDocumentEvent(List<WebSocket> sockets, string dataEvent, WebSocket senderSocket)
+    {
+        //exemplo
+        // "documentmessage/nomedocara$pdf!base64"
+        var partsEvent = dataEvent.Split('$');
+        var userName = partsEvent[0];
+        var eventDataDoc = partsEvent[1];
+        var eventDataDocSplit = eventDataDoc.Split('!');
+        var documentType = eventDataDocSplit[0];
+        var documentData = eventDataDocSplit[1];
+        var messageText = $"documentmessage/{userName}${documentType}!{documentData}";
+        await BroadcastMessageAsync(messageText, sockets, senderSocket);
+    }
+
+    private async Task BroadcastMessageAsync(string textMessage, List<WebSocket> sockets, WebSocket senderSocket)
+    {
+        var buffer = Encoding.UTF8.GetBytes($"{textMessage}");
         var tasks = new List<Task>();
 
         foreach (var socket in sockets)
