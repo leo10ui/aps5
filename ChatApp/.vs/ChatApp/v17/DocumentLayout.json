@@ -49,12 +49,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\Diego\\source\\repos\\leo10ui\\aps5\\ChatApp\\Client\\Client.cs",
               "RelativeDocumentMoniker": "Client\\Client.cs",
               "ToolTip": "C:\\Users\\Diego\\source\\repos\\leo10ui\\aps5\\ChatApp\\Client\\Client.cs",
               "RelativeToolTip": "Client\\Client.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAIwCsAAAAoAAAA",
+=======
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\leo10ui\\aps5\\ChatApp\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MainViewModel.cs",
+              "ToolTip": "D:\\Source\\Repos\\leo10ui\\aps5\\ChatApp\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MainViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T05:38:28.945Z",
               "EditorCaption": ""
