@@ -13,7 +13,6 @@ public class EventsController
     public async Task HandleEvent(WebSocket webSocket, string message, List<WebSocket> sockets)
     {
 
-        // var parts = message.Split('/');
         var parts = message.Split(new char[] { '/' }, 2);
         if (parts.Length != 2)
         {

@@ -56,16 +56,25 @@ public class WebSocketServer
 
     private async Task HandleWebSocketConnection(WebSocket webSocket)
     {
-        var buffer = new byte[1024 * 4];
+        var buffer = new byte[1024 * 512];
+        var messageBuilder = new StringBuilder();
 
         while (webSocket.State == WebSocketState.Open)
         {
-            var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+            WebSocketReceiveResult result;
+            do
+            {
+                result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                var messageChunk = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                messageBuilder.Append(messageChunk);
+            }
+            while (!result.EndOfMessage);
 
             if (result.MessageType == WebSocketMessageType.Text)
             {
-                var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                Console.WriteLine($"Evento Recebido: {message}");
+                var message = messageBuilder.ToString();
+                messageBuilder.Clear(); // Clear the StringBuilder for the next message
+                                        // Console.WriteLine($"Evento Recebido: {message}");
 
                 await eventsController.HandleEvent(webSocket, message, ConnectedSockets);
             }

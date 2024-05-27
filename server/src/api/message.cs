@@ -48,19 +48,31 @@ public class MessageController
     }
 
     private async Task BroadcastMessageAsync(string textMessage, List<WebSocket> sockets, WebSocket senderSocket)
-    {
-        var buffer = Encoding.UTF8.GetBytes($"{textMessage}");
-        var tasks = new List<Task>();
+{
+    Console.WriteLine($"{textMessage} FINAL");
+    byte[] messageBytes = Encoding.UTF8.GetBytes(textMessage);
+    int bufferSize = 8192; // Tamanho do buffer para cada fragmento
+    var tasks = new List<Task>();
 
-        foreach (var socket in sockets)
+    foreach (var socket in sockets)
+    {
+        if (socket != senderSocket && socket.State == WebSocketState.Open)
         {
-            if (socket != senderSocket && socket.State == WebSocketState.Open)
+            int offset = 0;
+
+            while (offset < messageBytes.Length)
             {
-                var arraySegment = new ArraySegment<byte>(buffer);
-                tasks.Add(socket.SendAsync(arraySegment, WebSocketMessageType.Text, true, CancellationToken.None));
+                int chunkSize = Math.Min(bufferSize, messageBytes.Length - offset);
+                bool endOfMessage = (offset + chunkSize) == messageBytes.Length;
+
+                var buffer = new ArraySegment<byte>(messageBytes, offset, chunkSize);
+                tasks.Add(socket.SendAsync(buffer, WebSocketMessageType.Text, endOfMessage, CancellationToken.None));
+
+                offset += chunkSize;
             }
         }
-
-        await Task.WhenAll(tasks);
     }
+
+    await Task.WhenAll(tasks);
+}
 }
