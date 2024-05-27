@@ -1,13 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Net.WebSockets;
-using System.Xml.Linq;
-using System.Text.Encodings;
-using System.Text;
 
 namespace ChatApp.ViewModel;
 
@@ -44,7 +37,7 @@ public partial class MainViewModel : ObservableObject
             Mensagens.Add(mensagem);
             MensagemTxt = string.Empty;
 
-            EnviarEvento(mensagem.Emissor, mensagem.Conteudo);
+            EnviarEvento("message",mensagem.Emissor, mensagem.Conteudo);
             
         };
     }
@@ -113,7 +106,7 @@ public partial class MainViewModel : ObservableObject
                 Emissor = String.Empty
             };
 
-            EnviarEvento("-", mensagem.Conteudo);
+            EnviarEvento("message","-", mensagem.Conteudo);
             Mensagens.Add(mensagem);
         }
         else
@@ -127,7 +120,7 @@ public partial class MainViewModel : ObservableObject
                 Emissor = ""
             };
 
-            EnviarEvento("-", mensagem.Conteudo);
+            EnviarEvento("message","-", mensagem.Conteudo);
             Mensagens.Add(mensagem);
 
             EntryNome = string.Empty;
@@ -151,15 +144,13 @@ public partial class MainViewModel : ObservableObject
             var result = await FilePicker.Default.PickAsync(options);
             if (result != null)
             {
-                AnexoTxt = result.FileName.ToString();
+                AnexoTxt = result.FileName;
                 if (result.FileName.EndsWith("jpg", StringComparison.OrdinalIgnoreCase) ||
                     result.FileName.EndsWith("png", StringComparison.OrdinalIgnoreCase))
                 {
-                    EnviarImagem(result.FullPath.ToString());
+                    EnviarImagem(result.FullPath);
                     AnexoTxt = string.Empty;
-                    using var stream = await result.OpenReadAsync();
-                    var image = ImageSource.FromStream(() => stream);
-                    
+                    EnviarEvento("imagemessage", Nome,result.FullPath);
                 }
             }
 
@@ -181,17 +172,33 @@ public partial class MainViewModel : ObservableObject
         await client.Disconnect();
     }
 
-    private async void EnviarEvento(string emissor, string mensagem)
+    private async void EnviarEvento(string tipoEvento, string emissor, string info)
     {
-        string msg = emissor + "$" + mensagem;
+        string dados = "";
         try
         {
-            await client.SendEvent("message", msg);
+            switch (tipoEvento)
+            {
+                case "message":
+                    dados = emissor + "$" + info;
+                    break;
+                case "imagemessage":
+                    dados = emissor + "$" + FileHandling.ConvertFileToBase64(info);
+                    break;
+                case "documentmessage":
+                    string extension = Path.GetExtension(info).ToLower();
+                    dados = emissor + "$" + extension.Remove(extension.IndexOf('.')) + "!" + FileHandling.ConvertFileToBase64(info);
+                    break;
+
+                default:
+                    Console.WriteLine($"Evento desconhecido: {tipoEvento}");
+                    break;
+            }
+            await client.SendEvent(tipoEvento, dados);
         } catch (Exception ex)
         {
             Console.WriteLine("Exception: " + ex);
         }
-        
     }
 
 }

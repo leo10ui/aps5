@@ -43,15 +43,40 @@ public partial class WebSocketClient : ObservableObject
 
             if (receivedMessage != null)
             {
-                string[] msgTratada = receivedMessage.Split(':');
 
-                var mensagem = new Mensagem
+                string[] msgTratada = receivedMessage.Split('/');
+                string tipoEvento = msgTratada[0];
+                string[] dados = msgTratada[1].Split('$');
+
+                switch (tipoEvento)
                 {
-                    Conteudo = msgTratada[1],
-                    Timestamp = DateTime.Now,
-                    Emissor = msgTratada[0]
-                };
-                mensagens.Add(mensagem);
+                    case "message":
+                        var msgTexto = new Mensagem
+                        {
+                            Conteudo = dados[1],
+                            Timestamp = DateTime.Now,
+                            Emissor = dados[0]
+                        };
+                        mensagens.Add(msgTexto);
+                        break;
+                    case "imagemessage":
+                        string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                        FileHandling.DecodeBase64ToFile(dados[1], documentsPath, "jpg");
+                        if (documentsPath != null)
+                        {
+                            var msgImagem = new Mensagem
+                            {
+                                Emissor = dados[0],
+                                FilePath = documentsPath + ".jpg",
+                                Timestamp = DateTime.Now,
+                                Tipo = MensagemTipo.Imagem
+                            };
+                            mensagens.Add(msgImagem);
+                        }
+                        break;
+                    default:
+                        break;
+                }   
             }
         }
     }
