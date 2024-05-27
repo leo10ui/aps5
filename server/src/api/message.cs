@@ -10,7 +10,7 @@ public class MessageController
     public async Task SendMessageEvent(WebSocket webSocket, string message, List<WebSocket> sockets)
     {   //exemplo
         //"message/username$textodamensagem"
-        var parts = message.Split('$');
+        var parts = message.Split(new char[] { '$' }, 2);
         if (parts.Length != 2)
         {
             Console.WriteLine($"Mensagem no formato errado: {message}");
@@ -26,7 +26,7 @@ public class MessageController
     public async Task SendImageEvent(List<WebSocket> sockets, string dataEvent, WebSocket senderSocket)
     {
         // "documentmessage/nomedocara$base64"
-        var partsEvent = dataEvent.Split('$');
+        var partsEvent = dataEvent.Split(new char[] { '$' }, 2);
         var userName = partsEvent[0];
         var eventDataDoc = partsEvent[1];
         var messageText = $"imagemessage/{userName}${eventDataDoc}";
@@ -37,10 +37,10 @@ public class MessageController
     {
         //exemplo
         // "documentmessage/nomedocara$pdf!base64"
-        var partsEvent = dataEvent.Split('$');
+        var partsEvent = dataEvent.Split(new char[] { '$' }, 2);
         var userName = partsEvent[0];
         var eventDataDoc = partsEvent[1];
-        var eventDataDocSplit = eventDataDoc.Split('!');
+        var eventDataDocSplit = eventDataDoc.Split(new char[] { '!' }, 2);
         var documentType = eventDataDocSplit[0];
         var documentData = eventDataDocSplit[1];
         var messageText = $"documentmessage/{userName}${documentType}!{documentData}";
