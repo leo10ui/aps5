@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Text;
 using ChatApp.ViewModel;
@@ -10,11 +11,11 @@ public partial class WebSocketClient : ObservableObject
     private ClientWebSocket _clientWebSocket;
     public WebSocketClient()
     {
-        _clientWebSocket = new ClientWebSocket();
     }
 
     public async Task Connect(string uri)
     {
+        _clientWebSocket = new ClientWebSocket();
         await _clientWebSocket.ConnectAsync(new Uri(uri), CancellationToken.None);
         Console.WriteLine("Connected to WebSocket server.");
     }
@@ -27,27 +28,50 @@ public partial class WebSocketClient : ObservableObject
 
     private async Task SendMessage(string message)
     {
-        var buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(message));
-        await _clientWebSocket.SendAsync(buffer, WebSocketMessageType.Text, true, CancellationToken.None);
+        byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+        int bufferSize = 8192; // Tamanho do buffer que você deseja usar para fragmentos
+        int offset = 0;
+
+        while (offset < messageBytes.Length)
+        {
+            int chunkSize = Math.Min(bufferSize, messageBytes.Length - offset);
+            bool endOfMessage = (offset + chunkSize) == messageBytes.Length;
+
+            var buffer = new ArraySegment<byte>(messageBytes, offset, chunkSize);
+            await _clientWebSocket.SendAsync(buffer, WebSocketMessageType.Text, endOfMessage, CancellationToken.None);
+
+            offset += chunkSize;
+        }
+
         Console.WriteLine($"Sent message: {message}");
     }
 
     public async Task Receive(ObservableCollection<Mensagem> mensagens)
     {
-        var buffer = new byte[1024];
+        var buffer = new byte[1024 * 512];
+        var messageBuilder = new StringBuilder();
+
         while (_clientWebSocket.State == WebSocketState.Open)
         {
-            var result = await _clientWebSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-            var receivedMessage = Encoding.UTF8.GetString(buffer, 0, result.Count);
+            WebSocketReceiveResult result;
+            do
+            {
+                result = await _clientWebSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                var messageChunk = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                messageBuilder.Append(messageChunk);
+            }
+            while (!result.EndOfMessage);
+
+            var receivedMessage = messageBuilder.ToString();
+            messageBuilder.Clear(); // Clear the StringBuilder for the next message
+
             Console.WriteLine($"Received message: {receivedMessage}");
 
-            if (receivedMessage != null)
+            if (!string.IsNullOrEmpty(receivedMessage))
             {
-
-                string[] msgTratada = receivedMessage.Split('/');
+                string[] msgTratada = receivedMessage.Split(new char[] { '/' },2);
                 string tipoEvento = msgTratada[0];
-                string[] dados = msgTratada[1].Split('$');
-
+                string[] dados = msgTratada[1].Split(new char[] { '$' },2);
                 switch (tipoEvento)
                 {
                     case "message":
@@ -62,7 +86,7 @@ public partial class WebSocketClient : ObservableObject
                     case "imagemessage":
                         string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         FileHandling.DecodeBase64ToFile(dados[1], documentsPath, "jpg");
-                        if (documentsPath != null)
+                        if (!string.IsNullOrEmpty(documentsPath))
                         {
                             var msgImagem = new Mensagem
                             {
@@ -76,7 +100,7 @@ public partial class WebSocketClient : ObservableObject
                         break;
                     default:
                         break;
-                }   
+                }
             }
         }
     }
@@ -84,6 +108,7 @@ public partial class WebSocketClient : ObservableObject
     public async Task Disconnect()
     {
         await _clientWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Client disconnected.", CancellationToken.None);
+        _clientWebSocket.Abort();
         Console.WriteLine("Disconnected from WebSocket server.");
     }
 }

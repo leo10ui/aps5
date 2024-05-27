@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,6 @@ public class FileHandling
             throw new InvalidOperationException("Unsupported file type");
         }
 
-        //string formattedString = $"{fileType}/{username}${extension}!{base64String}";
         return base64String;
     }
 

@@ -72,7 +72,7 @@
                     <Editor IsEnabled="{Binding IsEditor}" Text="{Binding MensagemTxt}" Placeholder="Digite uma mensagem..." HorizontalOptions="FillAndExpand" HeightRequest="100" VerticalTextAlignment="Start"/>
                 <HorizontalStackLayout HorizontalOptions="End">
                     <Label VerticalOptions="Center" Text="{Binding AnexoTxt}" FontSize="12"/>
-                    <Button IsEnabled="{Binding IsBtnEnviar}" Command="{Binding AnexarArquivoCommand}"  Text="Enviar Arquivo" Margin="10"/>
+                    <Button IsEnabled="{Binding IsBtnEnviar}" Command="{Binding AnexarArquivoCommand}"  Text="Enviar Imagem" Margin="10"/>
                     <Button IsEnabled="{Binding IsBtnEnviar}" Command="{Binding EnviarMensagemCommand}" Text="Enviar"  WidthRequest="80" HorizontalOptions="End" Margin="10"/>
                 </HorizontalStackLayout>
                     
