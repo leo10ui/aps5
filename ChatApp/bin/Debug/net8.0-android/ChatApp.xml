@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChatApp</name>
+    </assembly>
+    <members>
+        <member name="T:ChatApp.ViewModel.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.Mensagens">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.mensagens"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.Nome">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.nome"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.EntryNome">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.entryNome"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.Titulo">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.titulo"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.BtnTexto">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.btnTexto"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.MensagemTxt">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.mensagemTxt"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.AnexoTxt">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.anexoTxt"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.Testando">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.testando"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.IsEntryNome">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.isEntryNome"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.IsEditor">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.isEditor"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.IsBtnEnviar">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.isBtnEnviar"/>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.CollectionView">
+            <inheritdoc cref="F:ChatApp.ViewModel.MainViewModel.collectionView"/>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.enviarMensagemCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.EnviarMensagemCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.EnviarMensagemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.EnviarMensagem"/>.</summary>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.enviarImagemCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.EnviarImagemCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.EnviarImagemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.EnviarImagem(System.String)"/>.</summary>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.enviarDocumentoCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.EnviarDocumentoCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.EnviarDocumentoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.EnviarDocumento(System.String)"/>.</summary>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.limparCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.LimparCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.LimparCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.Limpar"/>.</summary>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.salvarNomeCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.SalvarNomeCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.SalvarNomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.SalvarNome"/>.</summary>
+        </member>
+        <member name="F:ChatApp.ViewModel.MainViewModel.anexarArquivoCommand">
+            <summary>The backing field for <see cref="P:ChatApp.ViewModel.MainViewModel.AnexarArquivoCommand"/>.</summary>
+        </member>
+        <member name="P:ChatApp.ViewModel.MainViewModel.AnexarArquivoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ChatApp.ViewModel.MainViewModel.AnexarArquivo(Microsoft.Maui.Storage.PickOptions)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Mensagens">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Mensagens" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EntryNome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EntryNome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Titulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Titulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BtnTexto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BtnTexto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MensagemTxt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MensagemTxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AnexoTxt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AnexoTxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Testando">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Testando" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEntryNome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEntryNome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEditor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEditor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBtnEnviar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBtnEnviar" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CollectionView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CollectionView" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Mensagens">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Mensagens" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EntryNome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EntryNome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Titulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Titulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BtnTexto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BtnTexto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MensagemTxt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MensagemTxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AnexoTxt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AnexoTxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Testando">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Testando" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEntryNome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEntryNome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEditor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEditor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBtnEnviar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBtnEnviar" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CollectionView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CollectionView" generated properties.</summary>
+        </member>
+    </members>
+</doc>

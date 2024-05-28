@@ -1,0 +1,1 @@
+D:\Source\Repos\leo10ui\aps5\ChatApp\ChatApp.csproj;x64
